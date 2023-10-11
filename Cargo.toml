@@ -6,3 +6,16 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+# Because the egui_node_graph is dependant on version 0.21.0 of eframe
+eframe = "0.21.0"
+# Looks like the egui_node_graph crate on crates.io is not completley matched with eframe
+egui_node_graph = {git = "https://github.com/setzer22/egui_node_graph.git"}
+anyhow = "1.0"
+serde = { version = "1.0", optional = true }
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = []
+persistence = ["serde", "egui_node_graph/persistence", "eframe/persistence"]
