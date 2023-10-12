@@ -5,7 +5,7 @@ mod app;
 pub use app::SGShaderGrapher;
 
 mod unity;
-pub use unity::get_nodes;
+
 
 #[cfg(target_arch = "wasm32")]
 use eframe::wasm_bindgen::{self, prelude::*};

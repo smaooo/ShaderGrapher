@@ -14,7 +14,6 @@
 #![cfg_attr(not(debug_assertions), deny(warnings))] // Forbid warnings in release builds
 #![warn(clippy::all, rust_2018_idioms)]
 
-use ShaderGrapher::get_nodes;
 use ShaderGrapher::SGShaderGrapher;
 
 #[cfg(not(target_arch = "wasm32"))]
@@ -36,5 +35,4 @@ fn main() {
     // )
     // .expect("Failed to run native app");
 
-    get_nodes();
 }
