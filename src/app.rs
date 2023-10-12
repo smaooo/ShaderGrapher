@@ -208,7 +208,7 @@ type EditorState =
     GraphEditorState<SGNodeData, SGDataType, SGValueType, SGNodeTemplate, SGGraphState>;
 
 #[derive(Default)]
-pub struct ShaderGrapher {
+pub struct SGShaderGrapher {
     state: EditorState,
 
     user_state: SGGraphState,
@@ -218,7 +218,7 @@ pub struct ShaderGrapher {
 const PERSISTENCE_KEY: &str = "egui_node_graph";
 
 #[cfg(feature = "persistence")]
-impl ShaderGrapher {
+impl SGShaderGrapher {
     /// If the persistence feature is enabled, Called once before the first frame.
     /// Load previous app state (if any).
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
@@ -233,7 +233,7 @@ impl ShaderGrapher {
     }
 }
 
-impl eframe::App for ShaderGrapher {
+impl eframe::App for SGShaderGrapher {
     #[cfg(feature = "persistence")]
     /// If the persistence function is enabled,
     /// Called by the frame work to save state before shutdown.

@@ -2,7 +2,10 @@
 #![warn(clippy::all, rust_2018_idioms)]
 
 mod app;
-pub use app::ShaderGrapher;
+pub use app::SGShaderGrapher;
+
+mod unity;
+pub use unity::get_nodes;
 
 #[cfg(target_arch = "wasm32")]
 use eframe::wasm_bindgen::{self, prelude::*};
