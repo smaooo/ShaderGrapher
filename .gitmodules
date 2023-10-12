@@ -1,0 +1,3 @@
+[submodule "ShaderGraph"]
+	path = ShaderGraph
+	url = git@github.com:Unity-Technologies/ShaderGraph.git
