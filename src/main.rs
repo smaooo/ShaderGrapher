@@ -1,3 +1,16 @@
+// TODO: Options for loading up shader graphs:
+    // Exporting a custom extension file from Blender/Unity/UE
+    // Reading files:
+        // Unity: is JSON
+        // Blender: Parse .blend binary https://crates.io/crates/blend https://github.com/fschutt/mystery-of-the-blend-backup
+
+// TODO: Loading up Blender Node Database:
+    // Blender source as submodule https://github.com/blender/blender/tree/main/source/blender/nodes/shader/nodes
+    // fake_bpy_module .py files https://github.com/nutti/fake-bpy-module /bpy/types.py
+    // Use bpy python module in Rust https://pyo3.rs/v0.19.2/python_from_rust
+
+
+
 #![cfg_attr(not(debug_assertions), deny(warnings))] // Forbid warnings in release builds
 #![warn(clippy::all, rust_2018_idioms)]
 
